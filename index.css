@@ -1,0 +1,285 @@
+body {
+    background: linear-gradient(180deg,
+            #81D4FA 0%,
+            /* azul cielo claro */
+            #4FC3F7 40%,
+            /* celeste intermedio */
+            #81C784 50%,
+            /* verde claro (pasto iluminado) */
+            #4CAF50 75%,
+            /* verde intermedio */
+            #388E3C 100%
+            /* verde césped oscuro abajo */
+        );
+    background-repeat: no-repeat;
+    /* evita repeticiones */
+    background-attachment: fixed;
+    /* opcional: fijo aunque haya scroll */
+    background-size: cover;
+    /* cubre toda la pantalla */
+}
+
+#mensaje {
+    margin-top: 100%;
+}
+
+
+.heart,
+#flowers-container,
+.despedida {
+
+    /* ocultos al inicio */
+}
+
+
+/* animación para la despedida */
+.despedida {
+    position: absolute;
+    top: 50px;
+    font-size: 2rem;
+    font-family: "Gochi Hand", cursive;
+    color: white;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.despedida.show {
+    display: block;
+    opacity: 1;
+}
+
+.heart,
+#flowers-container,
+.down {
+
+    /* ocultos al inicio */
+}
+
+
+/* animación para la despedida */
+.down {
+    position: absolute;
+    top: 50px;
+    font-size: 2rem;
+    font-family: "Gochi Hand", cursive;
+    color: white;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.down.show {
+    display: block;
+    opacity: 1;
+}
+
+
+#flowers-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* From Uiverse.io by mi-series */
+.button {
+    width: 150px;
+    padding: 0;
+    border: none;
+    transform: rotate(5deg);
+    transform-origin: center;
+    font-family: "Gochi Hand", cursive;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #494a4b;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #e2e067;
+}
+
+.button span {
+    background: #f1f5f8;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+}
+
+.button:active {
+    transform: translateY(5px);
+    padding-bottom: 0px;
+    outline: 0;
+}
+
+
+/* From Uiverse.io by gogo_3618 */
+.heart {
+    height: 70px;
+    width: 70px;
+    background: #e2e067;
+    transform: rotate(-45deg);
+    box-shadow: -10px -10px 90px #e2e067;
+    animation: anim 0.6s linear infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+        filter: blur(0px);
+    }
+
+    80% {
+        transform: rotate(-45deg) scale(1);
+        filter: blur(1px);
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+        filter: blur(2px);
+    }
+}
+
+.heart:before {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #e2e067;
+    top: -50%;
+    border-radius: 50px;
+}
+
+.heart:after {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #e2e067;
+    right: -50%;
+    border-radius: 50px;
+}
+
+
+/* From Uiverse.io by tako143 */
+.flower {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.petal {
+    position: absolute;
+    width: 35px;
+    height: 60px;
+    background: linear-gradient(180deg, #fffde7, #fff9c4);
+    border-radius: 50%;
+}
+
+.petal1 {
+    transform: rotate(0deg) translateY(-50%);
+    animation-delay: 0.1s;
+}
+
+.petal2 {
+    transform: rotate(45deg) translateY(-50%);
+    animation-delay: 0.2s;
+}
+
+.petal3 {
+    transform: rotate(90deg) translateY(-50%);
+    animation-delay: 0.3s;
+}
+
+.petal4 {
+    transform: rotate(135deg) translateY(-50%);
+    animation-delay: 0.4s;
+}
+
+.petal5 {
+    transform: rotate(180deg) translateY(-50%);
+    animation-delay: 0.5s;
+}
+
+.petal6 {
+    transform: rotate(225deg) translateY(-50%);
+    animation-delay: 0.6s;
+}
+
+.petal7 {
+    transform: rotate(270deg) translateY(-50%);
+    animation-delay: 0.7s;
+}
+
+.petal8 {
+    transform: rotate(315deg) translateY(-50%);
+    animation-delay: 0.8s;
+}
+
+.center {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #f7f1c2;
+    border-radius: 50%;
+}
+
+.flower .petal {
+    animation-name: changeColor;
+    animation-duration: 4s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+}
+
+.flower {
+    animation-name: rotateFlower;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes changeColor {
+    0% {
+        background: linear-gradient(180deg, #fff9c4, #fff176);
+        /* Amarillo claro suave */
+    }
+
+    25% {
+        background: linear-gradient(180deg, #fff59d, #ffeb3b);
+        /* Amarillo vivo pero armónico */
+    }
+
+    50% {
+        background: linear-gradient(180deg, #fdd835, #fbc02d);
+        /* Amarillo cálido moderado */
+    }
+
+    75% {
+        background: linear-gradient(180deg, #ffe082, #fdd835);
+        /* Amarillo dorado pero más apagado */
+    }
+
+    100% {
+        background: linear-gradient(180deg, #fff9c4, #fff176);
+        /* Regresa a un tono claro suave */
+    }
+}
+
+
+
+@keyframes rotateFlower {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.5) rotate(360deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}

@@ -5,13 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>:3</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            /* empieza invisible */
+            transition: opacity 2s ease-in-out;
+            /* duración del fade-in */
+        }
+
+        img.show {
+            opacity: 1;
+            /* al aparecer, se hace visible */
+            display: block;
+            /* asegurarse que se muestre */
+        }
+    </style>
 </head>
 
 <body>
 
+    <div class="d-flex justify-content-center align-items-center" id="mensaje">
+        <button class="button d-none">
+            <span>Flores?</span>
+        </button>
+
+        <div class="heart d-none"></div>
+
+    </div>
+
+    <div class="main d-flex justify-content-center align-items-center">
+
+        <div id="flowers-container"></div>
+
+        <div class="despedida">Tus flores para que <br> te dejes de joder 🙄</div>
+
+        <div class="down">te adoro down 💛</div>
+
+        <img src="image.png" alt="" class="">
+    </div>
 
 
 
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
